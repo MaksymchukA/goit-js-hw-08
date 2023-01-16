@@ -25,7 +25,7 @@ player.on('timeupdate', throttle(onTimeupdate, 1000));
 
 // 6. Під час перезавантаження сторінки скористайся методом setCurrentTime() з метою відновлення відтворення зі збереженої позиції.
 
-const currentTime = localStorage.getItem("videoplayer-current-time");
+const currentTime = localStorage.getItem("videoplayer-current-time") || 0;
 player.setCurrentTime(currentTime);
 
 // if (localStorage['videoplayer-current-time']) {
